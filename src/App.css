@@ -1,0 +1,164 @@
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin: 300px;
+  background-color: #b1d7f8;
+  color: #134e91;
+}
+
+img {
+  margin-left: 300px;
+  height: 230px;
+  width: 300px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #134e91;
+  font-family: 'Pacifico', cursive;
+}
+
+h3 {
+  text-align: center;
+  font-size: 30px;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.form-container, .inventory-container {
+  margin: 50px auto;
+  max-width: 900px;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: #bdbcbc;
+  box-shadow: 0 4px 8px rgba(38, 32, 32, 0.2);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label, input, button {
+  margin: 10px 0;
+}
+
+input, button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+input {
+  font-size: 16px;
+}
+
+button {
+  background-color: #47d060;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #b1a5a0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #47d060;
+  color: #134e91;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9; 
+}
+
+tr:nth-child(odd) {
+  background-color: #fff; 
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+.success-message {
+  color: green;
+  font-weight: bold;
+}
+
+/* App.css */
+
+.App {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  position: fixed; /* Make the header fixed */
+  top: 0; /* Place it at the top */
+  left: 0; /* Align it to the left */
+  right: 0; /* Align it to the right */
+  z-index: 1000; /* Ensure it stays above other content */
+  background: #b1d7f8; /* Background color (can be adjusted) */
+  border-bottom: 2px solid #47d060; /* Border below the header */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #47d060;
+  padding: 10px;
+  
+}
+
+.navbar button {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  background-color: #ddd;
+}
+
+.logout-button {
+  background-color: #ff4d4d; /* Red color for logout button */
+  color: white; /* White text */
+}
+
+.logout-button:hover {
+  background-color: #ff1a1a; /* Darker red on hover */
+}
+
+/* Adjust the content margin to account for the fixed header */
+.content {
+  margin-top: 100px; /* Adjust this value to account for both the header's height and the navbar's height */
+  padding: 20px; /* Optional padding for content */
+}

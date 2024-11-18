@@ -1,0 +1,101 @@
+
+.image-container {
+    position: relative;
+    overflow: hidden; /* Hide any overflow of images */
+    height: 200px; /* Adjust height based on image size */
+    display: flex; /* Use flexbox to arrange children */
+    justify-content: space-around; /* Space between images */
+    align-items: center; /* Vertically center the images */
+}
+
+.animated-image {
+    position: absolute;
+    width: 200px; /* Set a width for your images */
+    margin: 0 10px; /* Space around each image */
+    transform: scale(0.5); /* Start scale to make the image small */
+    opacity: 0; /* Start with images invisible */
+    animation: moveImages 30s linear infinite; /* Extended duration for much slower movement */
+}
+.bar-shadow {
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+@keyframes moveImages {
+    0% {
+        transform: translate(0, 0) scale(0.5); /* Start small and completely invisible */
+        opacity: 0; /* Completely invisible */
+    }
+    20% {
+        transform: translate(300px, 0) scale(1); /* Move right and scale to full size */
+        opacity: 1; /* Fully visible */
+    }
+    40% {
+        transform: translate(300px, 300px) scale(1); /* Move down and scale to full size */
+        opacity: 1; /* Fully visible */
+    }
+    60% {
+        transform: translate(0, 300px) scale(1); /* Move left and scale to full size */
+        opacity: 1; /* Fully visible */
+    }
+    80% {
+        transform: translate(0, 0) scale(0.5); /* Move up and shrink back */
+        opacity: 0; /* Fade out again */
+    }
+    100% {
+        transform: translate(0, 0) scale(0.5); /* Finish back to the starting position */
+        opacity: 0; /* Fade out */
+    }
+}
+
+/* For individual random movements, you can add classes dynamically if desired */
+.animated-image:nth-child(1) {
+    animation-delay: 0s;
+}
+.animated-image:nth-child(2) {
+    animation-delay: 3s; /* Increased delay for smoother visibility */
+}
+.animated-image:nth-child(3) {
+    animation-delay: 6s; /* Increased delay for smoother visibility */
+}
+.animated-image:nth-child(4) {
+    animation-delay: 9s; /* Increased delay for smoother visibility */
+}
+.animated-image:nth-child(5) {
+    animation-delay: 12s; /* Increased delay for smoother visibility */
+}
+.animated-image:nth-child(6) {
+    animation-delay: 15s; /* Increased delay for smoother visibility */
+}
+
+.text-container {
+    display: flex; /* Center the text horizontally and vertically */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 300px; /* Set the height of the container */
+    width: 300px; /* Set the width of the container */
+    overflow: hidden; /* Hide overflow if necessary */
+    background-color: #f0f0f0; /* Optional: background color for visibility */
+    font-size: 24px; /* Font size of the text */
+    font-family: Arial, sans-serif; /* Font family */
+}
+
+.spinning-text {
+    display: inline-block; /* Make inline-block to enable transform */
+    animation: spin 10s linear infinite, colorChange 5s linear infinite; /* Add color change animation */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg); /* Start rotation */
+    }
+    to {
+        transform: rotate(360deg); /* Complete a full rotation */
+    }
+}
+
+@keyframes colorChange {
+    0% { color: red; }
+    25% { color: yellow; }
+    50% { color: green; }
+    75% { color: blue; }
+    100% { color: red; } /* Loop back to the starting color */
+}
